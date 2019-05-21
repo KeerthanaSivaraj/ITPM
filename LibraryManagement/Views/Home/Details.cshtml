@@ -1,0 +1,60 @@
+﻿@model IEnumerable<LibraryManagement.Models.AddToCard>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Book_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.des)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Datetime)
+                </th>
+               
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Book_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.des)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Datetime)
+                    </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
